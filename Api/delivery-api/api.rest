@@ -1,0 +1,69 @@
+### REGISTER USER
+POST http://localhost:3000/api/auth/register
+Content-Type: application/json
+
+{
+  "email": "test@mail.com",
+  "password": "123456"
+}
+
+###
+
+### LOGIN USER
+POST http://localhost:3000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "test@mail.com",
+  "password": "123456"
+}
+
+###
+
+### GET ALL CLIENTS (JWT)
+GET http://localhost:3000/api/clients
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODEyMWQ4NjUyNjJiMzg0NDJmMGRmNDciLCJpYXQiOjE3NDYwNDAwMTAsImV4cCI6MTc0NjA0MzYxMH0.Cr_c0YSaAb_NSzYnfFgxYDbTbNB1wf2-QSOJW3ILKlY
+
+###
+
+### ADD CLIENT
+POST http://localhost:3000/api/clients
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODEyMWQ4NjUyNjJiMzg0NDJmMGRmNDciLCJpYXQiOjE3NDYwNDAwMTAsImV4cCI6MTc0NjA0MzYxMH0.Cr_c0YSaAb_NSzYnfFgxYDbTbNB1wf2-QSOJW3ILKlY
+
+{
+  "nom": "Client Test",
+  "adresse": "Rabat",
+  "telephone": "0600000000"
+}
+
+###
+
+### ADD LIVREUR
+POST http://localhost:3000/api/livreurs
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODEyMWQ4NjUyNjJiMzg0NDJmMGRmNDciLCJpYXQiOjE3NDYwNDAwMTAsImV4cCI6MTc0NjA0MzYxMH0.Cr_c0YSaAb_NSzYnfFgxYDbTbNB1wf2-QSOJW3ILKlY
+
+{
+  "nom": "Ahmed Livreur",
+  "telephone": "0700000000"
+}
+
+###
+
+### ADD COMMANDE
+POST http://localhost:3000/api/commandes
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODEyMWQ4NjUyNjJiMzg0NDJmMGRmNDciLCJpYXQiOjE3NDYwNDAwMTAsImV4cCI6MTc0NjA0MzYxMH0.Cr_c0YSaAb_NSzYnfFgxYDbTbNB1wf2-QSOJW3ILKlY
+
+{
+  "client": "6812752fe5e85a35ba512eea",
+  "adresseLivraison": "Adresse 123",
+  "livreur": "68127544e5e85a35ba512eec"
+}
+
+###
+
+### LOGOUT
+POST http://localhost:3000/api/auth/logout
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODEyMWQ4NjUyNjJiMzg0NDJmMGRmNDciLCJpYXQiOjE3NDYwNDAxNjEsImV4cCI6MTc0NjA0Mzc2MX0.2s1uLkGbqeg3L2MrOgVCva5Mqt0RHOBHXKQXjPd7pds
